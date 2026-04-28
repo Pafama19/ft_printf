@@ -6,11 +6,11 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 18:00:05 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/04/28 20:45:42 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/04/28 20:54:24 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "ft_printf.h"
 
 int	dec_to_hex(unsigned long address)
 {
@@ -19,7 +19,6 @@ int	dec_to_hex(unsigned long address)
 	count = 0;
 	if (address >= 16)
 		dec_to_hex(address / 16);
-
 	else
 	{
 		if ((address % 16) <= 9)

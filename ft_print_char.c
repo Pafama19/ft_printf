@@ -6,11 +6,11 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 16:24:27 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/04/26 17:54:05 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/04/28 20:54:02 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "ft_printf.h"
 
 int	ft_print_char(char c)
 {
