@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 18:00:05 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/04/28 18:09:38 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/04/28 20:45:42 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,31 @@
 
 int	dec_to_hex(unsigned long address)
 {
-	if (address <=16)
-	dec_to_hex(address/16);
-	
+	int	count;
+
+	count = 0;
+	if (address >= 16)
+		dec_to_hex(address / 16);
+
+	else
+	{
+		if ((address % 16) <= 9)
+			count += ft_print_char((address % 16) + '0');
+		else
+			count += ft_print_char((address % 16) - 10 + 'a');
+	}
+
+	return (count);
 }
 
 int	ft_print_ptr(void *ptr)
 {
+	int				len;
 	unsigned long	address;
-	
+
+	len = 0;
 	address = (unsigned long)ptr;
-	
+	len += ft_print_str("0x");
+	len += dec_to_hex(address);
+	return (len);
 }
