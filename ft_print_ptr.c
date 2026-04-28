@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 18:00:05 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/04/28 20:54:24 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/04/28 21:45:15 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,11 @@ int	dec_to_hex(unsigned long address)
 
 	count = 0;
 	if (address >= 16)
-		dec_to_hex(address / 16);
+		count += dec_to_hex(address / 16);
+	if ((address % 16) <= 9)
+		count += ft_print_char((address % 16) + '0');
 	else
-	{
-		if ((address % 16) <= 9)
-			count += ft_print_char((address % 16) + '0');
-		else
-			count += ft_print_char((address % 16) - 10 + 'a');
-	}
+		count += ft_print_char((address % 16) - 10 + 'a');
 
 	return (count);
 }

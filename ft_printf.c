@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 20:03:50 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/04/28 20:56:43 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/04/28 21:24:57 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int	ft_printf(char const *fixedarg, ...)
 	va_end (arglist);
 	return (total);
 }
+
 int	main(void)
 {
 	int	x;
@@ -69,7 +70,7 @@ int	main(void)
 	ft_printf("=== Pruebas de ft_printf ===\n");
 	ft_printf("Se va a imprimir un carácter: %c\n", 'd');
 	ft_printf("Se va a imprimir un string: %s\n", "El señor de los anillos");
-	ft_printf("Se va a imprimir un puntero: %p\n", (void *)&x);
+	ft_printf("Se va a imprimir un puntero: %p\n", (void *)123456);
 
 	return (0);
 }
