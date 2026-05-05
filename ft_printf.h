@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 16:45:03 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/05/05 19:38:33 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/05/05 21:09:16 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int	ft_printstr(char *str);
 int	ft_printptr(void *ptr);
 int	ft_printintdec(int num);
 int	ft_printunsigneddec(unsigned int num);
+int	ft_printhexnum(unsigned int num, char flag);
 
 #endif

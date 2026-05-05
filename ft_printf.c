@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 20:03:50 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/05/05 19:46:06 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/05/05 21:20:20 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int	ft_choose_flag(va_list arglist, const char flag)
 		count += ft_printintdec(va_arg(arglist, int));
 	if (flag == 'u')
 		count += ft_printunsigneddec(va_arg(arglist, unsigned int));
-	//if (flag == 'x' || flag == 'X')
-		//count += ft_print_hex(va_arg(arglist, int), flag);
-	//if (flag == '%')
-		//count += ft_print_char('%');
+	if (flag == 'x' || flag == 'X')
+		count += ft_printhexnum(va_arg(arglist, int), flag);
+	if (flag == '%')
+		count += ft_printchar('%');
 	return (count);
 }
 
@@ -71,5 +71,8 @@ int	main(void)
 	ft_printf("Se va a imprimir un puntero: %p\n", (void *)&x);
 	ft_printf("Se va a imprimir un número decimal:  %d\n", -214748364);
 	ft_printf("Se va a imprimir un entero sin signo:  %u\n", 4294967295);
+	ft_printf("Se va a imprimir un número hexadecimal  %x\n", 1234567);
+	ft_printf("Se va a imprimir un número hexadecimal  %X\n", 1234567);
+	ft_printf("Se va a imprimir el carácter de porcentaje  %%\n");
 	return (0);
 }
