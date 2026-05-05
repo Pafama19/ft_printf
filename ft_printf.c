@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 20:03:50 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/05/05 10:44:57 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/05/05 19:46:06 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@ int	ft_choose_flag(va_list arglist, const char flag)
 
 	count = 0;
 	if (flag == 'c')
-		count += ft_print_char(va_arg(arglist, int));
+		count += ft_printchar(va_arg(arglist, int));
 	if (flag == 's')
-		count += ft_print_str(va_arg(arglist, char *));
+		count += ft_printstr(va_arg(arglist, char *));
 	if (flag == 'p')
-		count += ft_print_ptr(va_arg(arglist, void *));
+		count += ft_printptr(va_arg(arglist, void *));
 	if (flag == 'i' || flag == 'd')
-		count += ft_print_intdec(va_arg(arglist, int));
-	/*if (flag == 'u')
-		count += ft_print_unsigneddec(va_arg(arglist, unsigned int));
-	if (flag == 'x' || flag == 'X')
-		count += ft_print_hex(va_arg(arglist, int), flag);
-	if (flag == '%')
-		count += ft_print_char('%');*/
+		count += ft_printintdec(va_arg(arglist, int));
+	if (flag == 'u')
+		count += ft_printunsigneddec(va_arg(arglist, unsigned int));
+	//if (flag == 'x' || flag == 'X')
+		//count += ft_print_hex(va_arg(arglist, int), flag);
+	//if (flag == '%')
+		//count += ft_print_char('%');
 	return (count);
 }
 
@@ -53,9 +53,7 @@ int	ft_printf(char const *fixedarg, ...)
 			i++;
 		}
 		else
-		{
 			total += write(1, &fixedarg[i], 1);
-		}
 		i++;
 	}
 	va_end (arglist);
@@ -71,6 +69,7 @@ int	main(void)
 	ft_printf("Se va a imprimir un carácter: %c\n", 'd');
 	ft_printf("Se va a imprimir un string: %s\n", "El señor de los anillos");
 	ft_printf("Se va a imprimir un puntero: %p\n", (void *)&x);
-	ft_printf("Se va a imprimir un número decimal:  %d\n", 224);
+	ft_printf("Se va a imprimir un número decimal:  %d\n", -214748364);
+	ft_printf("Se va a imprimir un entero sin signo:  %u\n", 4294967295);
 	return (0);
 }

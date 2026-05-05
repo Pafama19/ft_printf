@@ -1,46 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_intdec.c                                  :+:      :+:    :+:   */
+/*   ft_printunsigneddec.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 10:49:43 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/05/05 11:07:52 by pabfajar         ###   ########.fr       */
+/*   Created: 2026/05/05 19:18:12 by pabfajar          #+#    #+#             */
+/*   Updated: 2026/05/05 19:48:18 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	writenum(int num)
+int	ft_writeunsignednum(unsigned int num)
 {
-	int		i;
+	int	counter;
 
-	i = 0;
+	counter = 0;
 	if (num >= 10)
-		i += writenum(num / 10);
-	i += ft_print_char((num % 10) + '0');
-	return (i);
+		counter += ft_writeunsignednum(num / 10);
+	counter += ft_printchar((num % 10) + '0');
+	return (counter);
 }
 
-int	ft_print_intdec(int num)
+int	ft_printunsigneddec(unsigned int num)
 {
 	int	count;
 
 	count = 0;
 	if (num == 0)
-		count += ft_print_char('0');
-	else if (num == -2147483648)
-		count += ft_print_str("-2147483648");
-	else if (num < 0)
-	{
-		count += ft_print_char('-');
-		num = -num;
-		count += writenum(num);
-	}
+		count += ft_printchar('0');
 	else
-	{
-		count += writenum(num);
-	}
+		count += ft_writeunsignednum(num);
 	return (count);
 }
