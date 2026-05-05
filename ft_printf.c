@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 20:03:50 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/05/05 21:20:20 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/05/05 21:36:35 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_printf(char const *fixedarg, ...)
 	return (total);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	x;
 
@@ -75,4 +75,4 @@ int	main(void)
 	ft_printf("Se va a imprimir un número hexadecimal  %X\n", 1234567);
 	ft_printf("Se va a imprimir el carácter de porcentaje  %%\n");
 	return (0);
-}
+}*/
