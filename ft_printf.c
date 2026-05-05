@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 20:03:50 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/04/28 21:24:57 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/05/05 10:44:57 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_choose_flag(va_list arglist, const char flag)
 		count += ft_print_str(va_arg(arglist, char *));
 	if (flag == 'p')
 		count += ft_print_ptr(va_arg(arglist, void *));
-	//if (flag == 'i' || flag == 'd')
-		//count += ft_print_int(va_arg(arglist, int));
+	if (flag == 'i' || flag == 'd')
+		count += ft_print_intdec(va_arg(arglist, int));
 	/*if (flag == 'u')
 		count += ft_print_unsigneddec(va_arg(arglist, unsigned int));
 	if (flag == 'x' || flag == 'X')
@@ -70,7 +70,7 @@ int	main(void)
 	ft_printf("=== Pruebas de ft_printf ===\n");
 	ft_printf("Se va a imprimir un carácter: %c\n", 'd');
 	ft_printf("Se va a imprimir un string: %s\n", "El señor de los anillos");
-	ft_printf("Se va a imprimir un puntero: %p\n", (void *)123456);
-
+	ft_printf("Se va a imprimir un puntero: %p\n", (void *)&x);
+	ft_printf("Se va a imprimir un número decimal:  %d\n", 224);
 	return (0);
 }
