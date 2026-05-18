@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 20:03:50 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/05/05 21:36:35 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/05/18 17:03:09 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,8 @@ int	ft_printf(char const *fixedarg, ...)
 
 	x = 42;
 	ft_printf("=== Pruebas de ft_printf ===\n");
-	ft_printf("Se va a imprimir un carácter: %c\n", 'd');
-	ft_printf("Se va a imprimir un string: %s\n", "El señor de los anillos");
+	ft_printf("Se va a imprimir un carácter: %c. Este es el carácter\n", 'd');
+	ft_printf("Se va a imprimir un string: %s\n", "HELLO WORLD FROM 42");
 	ft_printf("Se va a imprimir un puntero: %p\n", (void *)&x);
 	ft_printf("Se va a imprimir un número decimal:  %d\n", -214748364);
 	ft_printf("Se va a imprimir un entero sin signo:  %u\n", 4294967295);
