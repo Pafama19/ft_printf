@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 18:00:05 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/05/05 19:02:19 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/05/18 16:43:29 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ int	ft_printptr(void *ptr)
 
 	len = 0;
 	address = (unsigned long)ptr;
+	if (ptr == 0)
+	{
+		write(1, "(nil)", 5);
+		return (5);
+	}
 	len += ft_printstr("0x");
 	len += dec_to_hex(address);
 	return (len);

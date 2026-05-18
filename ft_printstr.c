@@ -6,7 +6,7 @@
 /*   By: pabfajar <pabfajar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 16:39:59 by pabfajar          #+#    #+#             */
-/*   Updated: 2026/05/05 19:02:03 by pabfajar         ###   ########.fr       */
+/*   Updated: 2026/05/18 16:26:16 by pabfajar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_printstr(char *str)
 
 	count = 0;
 	if (!str)
-		return (0);
+		str = "(null)";
 	while (str[count])
 	{
 		write(1, &str[count], 1);
