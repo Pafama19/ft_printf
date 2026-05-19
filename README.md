@@ -12,7 +12,7 @@ Los especificadores de formato son los siguientes:
 
 %c: Si se quiere imprimir un carácter.
 
-%s: Si se quiere imprimir una cadena de carácteres.
+%s: Si se quiere imprimir una cadena de caracteres.
 
 %p: Si se quiere imprimir la dirección de memoria a la que apunta un puntero.
 
